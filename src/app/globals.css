@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ee5b2b;
+  --color-background-light: #f8f6f6;
+  --color-background-dark: #221510;
+
+  --font-display: "Space Grotesk", sans-serif;
+
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  font-family: var(--font-display);
+  min-height: max(884px, 100dvh);
+}
