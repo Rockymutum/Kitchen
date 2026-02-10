@@ -7,8 +7,8 @@ export default function BottomNav() {
     const pathname = usePathname();
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white to-transparent z-50">
-            <div className="mx-auto max-w-md bg-white/90 backdrop-blur-xl border border-gray-200 rounded-full flex items-center justify-around px-6 py-3 shadow-lg">
+        <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-t from-white to-transparent z-50 pb-safe">
+            <div className="mx-auto max-w-md bg-white/90 backdrop-blur-xl border border-gray-200 rounded-full flex items-center justify-around px-6 py-3 shadow-lg m-4">
                 <Link
                     href="/"
                     className={`flex flex-col items-center justify-center size-12 transition-colors ${pathname === "/" ? "text-primary" : "text-gray-500 hover:text-gray-900"}`}
@@ -45,7 +45,6 @@ export default function BottomNav() {
                     </span>
                 </Link>
             </div>
-            <div className="h-4"></div>
         </div>
     );
 }

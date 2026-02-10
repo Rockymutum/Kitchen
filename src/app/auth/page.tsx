@@ -23,7 +23,7 @@ export default function AuthPage() {
     };
 
     return (
-        <div className="fixed inset-0 z-[9999] h-[100dvh] w-full bg-[#fcfbf9] flex flex-col items-center justify-center p-6 overflow-hidden">
+        <div className="fixed inset-0 z-[9999] h-[100dvh] w-full bg-[#fcfbf9] flex flex-col items-center justify-center p-6 overflow-hidden pt-safe pb-safe">
             {/* Ambient Background Elements */}
             <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-[-10%] right-[-5%] w-[400px] h-[400px] bg-orange-200/20 rounded-full blur-[100px] pointer-events-none" />

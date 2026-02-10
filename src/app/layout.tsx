@@ -22,10 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="theme-color" content="#ffffff" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body
-        className={`${spaceGrotesk.variable} bg-background-light text-gray-900 min-h-screen pb-24 antialiased`}
+        className={`${spaceGrotesk.variable} bg-background-light text-gray-900 h-screen overflow-hidden antialiased`}
       >
         <CartProvider>{children}</CartProvider>
       </body>

@@ -39,13 +39,13 @@ export default function Home() {
 
   return (
     <main
-      className={`pb-20 transition-[padding] duration-300 ease-in-out ${isSearchOpen ? "pt-[150px]" : "pt-[90px]"
+      className={`h-screen overflow-hidden transition-[padding] duration-300 ease-in-out ${isSearchOpen ? "pt-[150px]" : "pt-[90px]"
         }`}
     >
       {/* Unified Sticky Header Container */}
       <div
         ref={headerRef}
-        className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-transform duration-300 ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
+        className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-transform duration-300 pt-safe ${scrollDirection === "down" ? "-translate-y-full" : "translate-y-0"
           }`}
       >
         <Header
@@ -68,18 +68,21 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hide Featured and Specials when searching to mimic Zomato's search behavior */}
-      {!searchQuery && (
-        <>
-          <FeaturedDish />
-          <DailySpecials />
-        </>
-      )}
+      {/* Scrollable Content Area */}
+      <div className="h-full overflow-y-auto pb-24">
+        {/* Hide Featured and Specials when searching to mimic Zomato's search behavior */}
+        {!searchQuery && (
+          <>
+            <FeaturedDish />
+            <DailySpecials />
+          </>
+        )}
 
-      <UnifiedMenu
-        searchQuery={searchQuery}
-        isVegMode={isVegMode}
-      />
+        <UnifiedMenu
+          searchQuery={searchQuery}
+          isVegMode={isVegMode}
+        />
+      </div>
       <BottomNav />
     </main>
   );
