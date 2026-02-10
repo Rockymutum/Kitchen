@@ -40,14 +40,14 @@ export default function CheckoutPage() {
     }
 
     return (
-        <main className="bg-stone-50 min-h-screen font-sans flex flex-col">
+        <main className="bg-stone-50 h-screen overflow-hidden font-sans flex flex-col">
             <CheckoutHeader />
 
             <div className="pt-4">
                 <CheckoutProgress currentStep={currentStep} />
             </div>
 
-            <div className="px-4 flex-1 flex flex-col gap-6 mt-2 pb-4">
+            <div className="px-4 flex-1 flex flex-col gap-6 mt-2 pb-4 overflow-y-auto">
                 {/* Step 1: Basket */}
                 {currentStep === 1 && (
                     <div className="flex-1 flex flex-col gap-6 animate-in slide-in-from-right-4 fade-in duration-300">
